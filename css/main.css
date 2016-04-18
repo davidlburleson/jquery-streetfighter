@@ -1,5 +1,14 @@
+@font-face {
+	font-family: comical;
+	src: url("../fonts/animeace2_reg.otf");
+}
+
 body {
 	background-color: black;
+}
+
+em {
+	font-style: italic;
 }
 
 .main {
@@ -12,9 +21,25 @@ body {
 	z-index: 1;
 }
 
+.hadouken, .ryu-ready, .ryu-still, .ryu-throwing, .ryu-cool {
+  	background-repeat: no-repeat;
+}
+
+.hadouken {
+ 	background-image: url('../images/hadouken.gif');
+ 	width: 156px; 
+  	height: 90px;
+  	display: none;
+  	position: absolute;
+  	z-index: 10;
+  	top: 167px;
+  	left: 520px;
+  	float: left;
+}
+
+.ryu-container,
 .ryu {
-	width: 659px;
-	height: 494px;
+	float: left;
 }
 
 .ryu-ready, .ryu-still, .ryu-throwing, .ryu-cool {
@@ -42,18 +67,61 @@ body {
   	background-image: url('../images/ryu-cool.gif');
 }
 
-.hadouken, .ryu-ready, .ryu-still, .ryu-throwing, .ryu-cool {
-  	background-repeat: no-repeat;
+.text-content {
+	position: absolute;
+	left: 650px;
+	height: 425px;
+	width: 600px;
+	padding-top: 75px;
 }
 
-.hadouken {
- 	background-image: url('../images/hadouken.gif');
- 	width: 156px; 
-  	height: 90px;
-  	display: none;
-  	position: absolute;
-  	z-index: 10;
-  	top: 167px;
-  	left: 520px;
-  	float: left;
+.sf-logo {
+	display: none;
+	background-image: url("../images/sf-logo.png");
+	width: 682px;
+	height: 314px;
+}
+
+.jquery-logo {
+	display: none;
+	background-image: url("../images/jquery-logo.png");
+	width: 500px;
+	height: 172px;
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.brought-by,
+.how-to {
+	display: none;
+	color: red;
+	font-family: comical;
+	font-size: 50px;
+	width: 600px;
+}
+
+.brought-by {
+	text-align: center;
+	margin-top: 100px;
+}
+
+.how-to p {
+	width: 50%;
+	color: black;
+	font-size: 24px;
+	line-height: 45px;
+}
+
+.how-to p + p {
+	margin-left: 275px;
+}
+
+audio:not( [controls]) {
+	display: none;
+}
+
+audio {
+	width: 300px;
+	height: 30px;
 }
